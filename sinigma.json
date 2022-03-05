@@ -1,0 +1,192 @@
+{
+  "uuid": "e615eb52-de15-4e65-b0cb-22d98a0ed535",
+  "lastMigration": 19,
+  "name": "Sinigma Shop",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "routes": [
+    {
+      "uuid": "c32e339d-ad3c-429a-a713-bd3eeaace2ad",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "products",
+      "responses": [
+        {
+          "uuid": "0d4f194d-df8c-4b74-a195-fb75ea86cedf",
+          "body": "{\n  \"data\" : [\n    {\n        \"id\" : \"001\",\n        \"name\" : \"Shampoo\"\n    },\n    {\n        \"id\" : \"002\",\n        \"name\" : \"Shabun\"\n    },\n    {\n        \"id\" : \"003\",\n        \"name\" : \"Odol\"\n    },\n    {\n        \"id\" : \"004\",\n        \"name\" : \"Scrub\"\n    },\n    {\n        \"id\" : \"005\",\n        \"name\" : \"Sikat Gigi\"\n    }\n]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
+    },
+    {
+      "uuid": "9ec06a19-f6c9-4b9d-8c02-c7494f444984",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "products",
+      "responses": [
+        {
+          "uuid": "31ae4fbc-11cb-44f1-986e-81b2d9bea650",
+          "body": "{\n  \"status\":\"201\",\n  \"message\":\"Data has been saved\",\n  \"data\":{}\n}",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
+    },
+    {
+      "uuid": "57106b0c-2f37-4dd8-be7f-1a8a6be60382",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "products/:id",
+      "responses": [
+        {
+          "uuid": "cb00e3e1-097d-44ce-a3cf-c7c46762957c",
+          "body": "{\n    \"id\" : \"001\",\n    \"name\" : \"Shampoo\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
+    },
+    {
+      "uuid": "ba188e33-51ed-4e1b-a179-98663562b7f4",
+      "documentation": "",
+      "method": "put",
+      "endpoint": "products",
+      "responses": [
+        {
+          "uuid": "d7d45985-c999-4427-93b3-fc38b0ffbad1",
+          "body": "{\n  \"status\":\"200\",\n  \"message\":\"Data has been updated\",\n  \"data\":{\n    \"id\" : \"001\",\n    \"name\" : \"Conditioner\"\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
+    },
+    {
+      "uuid": "6779e4b2-b37b-490f-87d9-812319ab43a8",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "products/:id",
+      "responses": [
+        {
+          "uuid": "2fdef66b-f5c4-4a95-8cbb-011756b698dc",
+          "body": "{\n  \"status\":\"200\",\n  \"message\":\"Data has been deleted\",\n  \"data\":{}\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
+    },
+    {
+      "uuid": "45ece099-5942-4440-9568-face5a8cb783",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "auth",
+      "responses": [
+        {
+          "uuid": "1abeb2de-ff52-4a8c-8310-7ebb7c02521a",
+          "body": "{\n\"token\":\"1234\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "hostname": "0.0.0.0",
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  }
+}
